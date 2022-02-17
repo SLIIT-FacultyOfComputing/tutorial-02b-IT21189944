@@ -27,3 +27,29 @@ int main() {
   std::cout << std::endl;
   return 0;
 }
+ 
+long nCr(int n, int r){
+  long ncr;
+  float fac = 1,fac2 = 1,fac3 = 1;
+  int j;
+  
+  j = n-r;
+  
+    for (n; n >= 1; n--){
+    fac *= n;
+  }
+  
+    for (r; r >= 1; r--){
+    fac2 *= r;
+  }
+  
+    for (j; j > 0; j--){
+    fac3 *= j;
+  }
+  
+  ncr = (long)fac/(fac2 * fac3);
+  return ncr;
+ 
+}
+
+
